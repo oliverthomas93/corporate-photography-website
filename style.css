@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 95px;
+}
+#logo {
+    position: relative;
+    display: inline-block;
+    width: 218px;
+    margin-left: 25px;
+    top: 10px;
+}
+#logo h1 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 2.2rem;
+    border-top: 1px solid whitesmoke;
+    color: whitesmoke;
+    margin: 0;
+    z-index: 5;
+}
+#logo h2 {
+    position: relative;
+    top: -12px;
+    text-align: center;
+    color: rgb(97, 178, 184);
+    margin: 0;
+    border-bottom: 1px solid whitesmoke;
+    font-size: 0.82rem;
+    padding: 6px 0px 6px 1px;
+    letter-spacing: 0.07em;
+    word-spacing: 0.2em;
+    font-weight: 200;
+}
+.nav {
+    height: 80%;
+    float: right;
+    color: whitesmoke;
+    opacity: 0.4;
+    font-family: 'Roboto Condensed',sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    display: flex;
+    transition: all 0.6s ease;
+}
+.page-links {
+    display: flex;
+    column-gap: 50px;
+    padding: 27px 10px 27px 50px;  
+}
+.nav:hover {
+    background: rgba(0, 0, 0, 0.651);
+    opacity: 1;
+}
+.page-links li, .sm-links li{
+    list-style-type: none;
+}
+.page-links a, .sm-links a{
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.75s ease;
+}
+.sm-links a:hover {
+    filter: invert(0.5);
+}
+.page-links a:hover {
+    color: rgb(97, 178, 184);
+}
+.sm-links {
+    display: flex;
+    column-gap: 20px;
+    float: right;
+    filter: invert(1);
+    margin: 20px 20px;
+    padding: 0px 12px;
+    border-left: 1px black solid;  
+    align-items: center;
+    position: relative;
+    bottom: 1px;
+}
+.sm-links a{
+    position: relative;
+    top: 1px;
+} 
+.sm-links img {
+    width: 20px;
+}
+.fb img{
+    position: relative;
+    left: 6px;
+    width: 25px;
+}
+.linked img {
+    width: 17px;
+}
+.gradient {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.555), transparent);
+    z-index: 1;
+}
+.pic-container {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+.pic {
+    width: 100%;
+    height: 100%;
+    background-image: url(1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.7s;
+}
+@keyframes fade {
+    from {opacity: 0.2}
+    to {opacity: 1}
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 12px;
+    color: rgba(255, 255, 255, 0.596);
+    background-color: rgba(0, 0, 0, 0.068);
+    font-size: 28px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 3;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+  display: none;
+}
+.prev:hover, .next:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.747);
+}
