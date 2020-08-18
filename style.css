@@ -104,26 +104,62 @@
     position: absolute;
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.555), transparent);
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.253), transparent);
     z-index: 1;
 }
-.pic-container {
+.slideshow-container {
+    display: flex;
     width: 100vw;
     height: 100vh;
     background: black;
 }
-.pic {
+.slides {
+    display: none;
     width: 100%;
     height: 100%;
-    background-image: url(1.jpg);
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
+}
+#img1 {
+    background-image: url(./1.jpg);
+}
+#img2 {
+    background-image: url(./2.jpg);
+}
+#img3 {
+    background-image: url(./3.jpg);
+}
+#img4 {
+    background-image: url(./4.jpg);
+}
+#img5 {
+    background-image: url(./5.jpg);
+}
+#img6 {
+    background-image: url(./6.jpg);
+}
+#img7 {
+    background-image: url(./7.jpg);
+}
+#img8 {
+    background-image: url(./8.jpg);
+}
+#img9 {
+    background-image: url(./9.jpg);
+}
+#img10 {
+    background-image: url(./10.jpg);
 }
 .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.7s;
     animation-name: fade;
     animation-duration: 1.7s;
 }
+@-webkit-keyframes fade {
+    from {opacity: 0.2}
+    to {opacity: 1}
+  }
 @keyframes fade {
     from {opacity: 0.2}
     to {opacity: 1}
@@ -146,9 +182,6 @@
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
-}
-.prev {
-  display: none;
 }
 .prev:hover, .next:hover {
     color: white;
