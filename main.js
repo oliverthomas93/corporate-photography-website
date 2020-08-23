@@ -1,22 +1,15 @@
-//Slideshow
-let slideIndex = 1;
-showSlides(slideIndex);
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slides");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+//Auto Slideshow
+// Original JavaScript code by Chirp Internet: www.chirp.com.au
+window.addEventListener("DOMContentLoaded", function(e) {
+  let pics = document.querySelector('.slideshow-container');
+  let fadeComplete = function(e) {
+      pics.appendChild(arr[0]);
+  };
+  let arr = pics.getElementsByTagName('div');
+  for(let i = 0; i < arr.length; i++) {
+      arr[i].addEventListener('animationend', fadeComplete, false);
   }
-  slides[slideIndex-1].style.display = "block";  
-}
+}, false);
 
 //Responsive side nav
 function navSlide() {
@@ -35,5 +28,4 @@ function navSlide() {
         })
     });
 }
-
 navSlide();
