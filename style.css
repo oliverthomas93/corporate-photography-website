@@ -48,6 +48,7 @@
     font-weight: 200;
 }
 .nav {
+    z-index: 4;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -56,11 +57,13 @@
     float: right;
     color: whitesmoke;
     opacity: 0.5;
+    background: transparent;
     font-family: 'Roboto Condensed',sans-serif;
     text-transform: uppercase;
     font-weight: normal;
     display: flex;
     transition: all 0.6s ease;
+    
 }
 .page-links {
     position: relative;
@@ -149,11 +152,11 @@
     opacity: 0;
     position: absolute;
     padding: 0 30px;
-    bottom: 40%;
+    top: 500px;
     color: rgb(97, 178, 184);
     animation-name: fade;
     animation-fill-mode: forwards;
-    animation-delay: 1.5s;
+    /*animation-delay: 1.5s;*/
     animation-duration: 2s;
     font-size: 2.75rem;
     z-index: 2;
@@ -164,8 +167,8 @@
     font-size: 3.5rem;
 }
 @keyframes fade {
-    from {opacity: 0; bottom: 20%}
-    to {opacity: 1; bottom: 65%}
+    from {opacity: 0; top: 500px}
+    to {opacity: 1; top: 250px}
 }
 .bio {
     letter-spacing: 1px;
@@ -174,9 +177,9 @@
     font-weight: 300;
     opacity: 0;
     position: absolute;
-    max-width: 750px;
+    max-width: 850px;
     text-align: center;
-    bottom: 39%;
+    top: 650px;
     color: whitesmoke;
     animation-name: fade-bio;
     animation-fill-mode: forwards;
@@ -187,8 +190,8 @@
     padding: 0 30px;
 }
 @keyframes fade-bio {
-    from {opacity: 0; bottom: 5%}
-    to {opacity: 1; bottom: 39%}
+    from {opacity: 0; top: 650px}
+    to {opacity: 1; top: 400px}
 }
 .button-wrapper {
     width: 400px;
@@ -197,7 +200,7 @@
     z-index: 2;
     justify-content: space-around;
     position: absolute;
-    bottom: 23%;
+    top: 670px;
 }
 .see-my-work, .enquiry {
     font-family: 'Roboto Condensed',sans-serif;
@@ -247,7 +250,6 @@
     width: 100vw;
     min-height: 670px;
     height: 100vh;
-    background: black;
 }
 .slides {
     position: absolute;
@@ -370,7 +372,6 @@
         padding: 0;
         margin: 0 0 40px 0;
     }
-    
     .burger {
         display: block;
         z-index: 3;
@@ -401,24 +402,27 @@
 }
 @media only screen and (max-width: 780px) {
     .intro {
-        bottom: 40%;
         font-size: 2rem;
+        top: 400px;
     }
     .intro span {
         font-size: 2.75rem;
     }
     @keyframes fade {
-        from {opacity: 0; bottom: 40%}
-        to {opacity: 1; bottom: 68%}
+        from {opacity: 0; top: 400px}
+        to {opacity: 1; top: 200px}
     }
     .bio {
         line-height: 2.1rem;
-        bottom: 15%;
+        top: 550px;
         font-size: 1.3rem;
     }
     @keyframes fade-bio {
-        from {opacity: 0; bottom: 15%}
-        to {opacity: 1; bottom: 45%}
+        from {opacity: 0; top: 550px}
+        to {opacity: 1; top: 350px}
+    }
+    .button-wrapper {
+        top: 590px;
     }
 }
 @media only screen and (max-width: 600px) {
@@ -458,22 +462,26 @@
 }
 @media only screen and (max-width: 580px) {
     .intro {
-        bottom: 40%;
+        top: 400px;
         font-size: 1.5rem;
     }
     .intro span {
         font-size: 2.25rem;
     }
+    @keyframes fade {
+        from {opacity: 0; top: 400px}
+        to {opacity: 1; top: 200px}
+    }
     .bio {
         font-size: 1.1rem;
     }
     @keyframes fade-bio {
-        from {opacity: 0; bottom: 15%}
-        to {opacity: 1; bottom: 45%}
+        from {opacity: 0; top: 550px}
+        to {opacity: 1; top: 350px}
     }
     .button-wrapper {
         width: 350px;
-        bottom: 32%;
+        top: 590px;
     }
     .see-my-work, .enquiry {
         width: 160px;
@@ -481,29 +489,32 @@
 }
 @media only screen and (max-width: 430px) {
     .intro {
-        bottom: 45%;
+        top: 350px;
         font-size: 1.5rem;
     }
     @keyframes fade {
-        from {opacity: 0; bottom: 45%}
-        to {opacity: 1; bottom: 67%}
+        from {opacity: 0; top: 350px}
+        to {opacity: 1; top: 150px}
     }
     .intro span {
         font-size: 2.25rem;
     }
     .bio {
         font-size: 1.1rem;
-        bottom: 15%;
+        top: 500px;
     }
     @keyframes fade-bio {
-        from {opacity: 0; bottom: 15%}
-        to {opacity: 1; bottom: 30%}
+        from {opacity: 0; top: 500px}
+        to {opacity: 1; top: 300px}
     }
     .button-wrapper {
         width: 350px;
-        bottom: 10%;
+        top: 570px;
     }
     .see-my-work, .enquiry {
         width: 160px;
+    }
+    .nav {
+        height: 75vh;
     }
 }
